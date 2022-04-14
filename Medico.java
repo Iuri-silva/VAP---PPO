@@ -1,5 +1,8 @@
-public class Medico{
-  char nome;
+public class Medico {
+    String nome;
 
-  Medico(char nome){}
+    //contructor
+    Medico(String name){
+        this.nome = name;
+    }
 }
