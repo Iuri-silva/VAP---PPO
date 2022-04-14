@@ -1,7 +1,5 @@
 public class Medico {
-    String nome;
-
-    //contructor
+  String nome;
     Medico(String name){
         this.nome = name;
     }

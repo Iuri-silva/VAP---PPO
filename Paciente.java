@@ -1,24 +1,28 @@
 
 public class Paciente {
-    String nome;
-    Medico medico = new Medico("Marcos Vey");
-    int diasInternado;
+  
+    Medico medico = new Medico("MEDICO GENÉRICO");
+  
+    int diasInter;    String nome;
 
-    // Paciente(String nome, int dias){
-    //     this.nome = nome;
-    //     this.diasInternado = dias;
-    // }
+
 
     public void exibirRelatorioPac() {
-        System.out.print("-----Relatorio------\n");
-        System.out.print("Paciente:" + nome +  " \n");
-        System.out.print("Medico Responsavel: "+ medico.nome + "\n");
-        System.out.print("Dias Internado: "+ diasInternado + "\n");
-        System.out.print("--------FIM--------\n");
+      
+        System.out.print("Relatorio");
+      
+        System.out.print("Paciente"+nome);
+      
+        System.out.print("Medico"+medico.nome);
+
+      
+        System.out.print("Dia Internados:"+diasInter);
+      
     }
 
-    public int retornarDiasIntern() {
-        System.out.print("Paciente: " + nome + "Esta internado a " + diasInternado +" dias");
-        return diasInternado;
+    public int DiasIntern() {
+        System.out.print(nome+"Esta internado a:"+diasInter+"dias");
+        return diasInter;
+      
     }
 }

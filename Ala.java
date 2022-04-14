@@ -1,16 +1,23 @@
 public class Ala {
-    int id;
-    String especialidade;
-    Quarto quarto = new Quarto();
 
-    Ala(int id, String espec){
+    String especialidade;
+      int id;
+    
+Quarto quarto = new Quarto();
+
+    Ala(int id, String espc){
+      
         this.id = id;
-        this.especialidade = espec;
+      
+        this.especialidade = espc;
+
     }
 
-    public void exibirRelatorio() {
+  
+    public void Relatorio() {
         System.out.print("ID: " + id + "\n");
+      
         System.out.print("Especialidade: " + especialidade + "\n");
-        quarto.verificarQuartoVazio();
+        quarto.Vazio();
     }
 }
