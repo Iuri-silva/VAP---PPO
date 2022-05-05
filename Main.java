@@ -1,108 +1,38 @@
-import java.util.Scanner
+
+//import java.util.Scanner;
 class Main {
 
 
     public static void main(String[] args) {
-        
+        Quarto quarto1 = new Quarto(1);
+        Quarto quarto2 = new Quarto(2);
       
-        Ala ala1 = new Ala(1,"Oftalmo");
-      
-        Ala ala2 = new Ala(2,"psiquiátrica");
+        Ala ala1 = new Ala(1,"Oftalmo",quarto1);
+        Ala ala2 = new Ala(2,"psiquiátrica",quarto2);
 
-Scanner sc = new Scanner(System.in);
+        Paciente paciente1 = new Paciente("Roberto",10,"DR. Luciano");
+        Paciente paciente2 = new Paciente("Luciano",25,"DR. Vander");
+        Paciente paciente3 = new Paciente("Jorge",19,"DR. China");
+        Paciente paciente4 = new Paciente("Mario",40,"DR. Marcos");
+        Paciente paciente5 = new Paciente("Maria",8,"DR. Valeria");
+        Paciente paciente6 = new Paciente("Juliana",4,"DR. Ana Paula");
 
-        System.out.println("numero quarto ala 1");
-        int nun = sc.nextInt();
-        ala1.quarto.numero = nun;
-      
-        System.out.print("\n\nQuanrto: " + ala1.quarto.numero);
-
-      
-        System.out.print("nome 1 paciente ");
-        String nome = sc.next();
-        ala1.quarto.paciente1.nome = nome;
-      
-        System.out.print("dias intrenado 1 paciente ");
-        nun = sc.nextInt();
-        ala1.quarto.paciente1.diasInter = nun;
-      
-        System.out.print("medico responsavel pelo 1° paciente ");
-        nome = sc.next();
-        ala1.quarto.paciente1.medico.nome = nome;
-        System.out.print("Quanrto: " + ala1.quarto.numero);
-
-      
-        System.out.print("nome 2 pccint");
-        nome = sc.next();
-        ala1.quarto.paciente2.nome = nome;
-      
-        System.out.print("dias intrenado 2 pacnt");
-        nun = sc.nextInt();
-        ala1.quarto.paciente2.diasInter = nun;
-      
-        System.out.print("medico responsavel 2 pacnt ");
-        nome = sc.next();
-        ala1.quarto.paciente2.medico.nome = nome;
-
-        System.out.print("Quanrto: " + ala1.quarto.numero);
-      
-        System.out.print("nome 3 pacnt");
-        nome = sc.next();
-        ala1.quarto.paciente3.nome = nome;
-      
-        System.out.print("dias internado 3 pacnt");
-        nun = sc.nextInt();
-        ala1.quarto.paciente3.diasInter = nun;
-      
-        System.out.print("medico resp 3 pacnt");
-        nome = sc.next();
-        ala1.quarto.paciente3.medico.nome = nome;
-
-      
-        System.out.println("numero quarto ala 2 ");
-        int nun1 = sc.nextInt();
-        ala2.quarto.numero = nun1;
-      
-        System.out.print("Quarto: " + ala2.quarto.numero);
-      
-        System.out.print("nome do 1 pcnt: ");
-        String nom1 = sc.next();
-        ala2.quarto.paciente1.nome = nom1;
-      
-        System.out.print("dias internado 1 pacnt");
-        nun = sc.nextInt();
-        ala2.quarto.paciente1.diasInter = nun;
-      
-        System.out.print("medico rspn 1 pcnt ");
-        nom1 = sc.next();
-        ala2.quarto.paciente1.medico.nome = nom1;
-      
-        System.out.print("Quanrto: " + ala2.quarto.numero);
-      
-        System.out.print("nome 2 pacnt");
-        nom1 = sc.next();
-        ala2.quarto.paciente2.nome = nom1;
-      
-        System.out.print("dias internado 2pcnt");
-        nun = sc.nextInt();
-        ala2.quarto.paciente2.diasInter = nun;
-      
-        System.out.print("medico respo 2 pascnt: ");
-        nom1 = sc.next();
-
-      
-      
-        ala1.quarto.paciente2.medico.nome = nom1;
+        quarto1.paciente1 = paciente1;
+        quarto1.paciente2 = paciente2;
+        quarto1.paciente3 = paciente5;
+        quarto2.paciente1 = paciente3;
+        quarto2.paciente2 = paciente4;
+        quarto2.paciente3 = paciente6;
       
         ala1.quarto.MaxDiasInter();
       
         ala1.quarto.MinDiasInter();
       
-        ala1.quarto.paciente1.RelatorioPaciente();
+        ala1.quarto.paciente1.exibirRelatorioPac();
       
-        ala2.quarto.paciente1.RelatorioPaciente();
-      
-        ala2.quarto.paciente2.RelatorioPaciente();
+        ala2.quarto.paciente1.exibirRelatorioPac();
+    
+        ala2.quarto.paciente2.exibirRelatorioPac();
       
         ala1.quarto.Vazio();
       

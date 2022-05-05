@@ -1,14 +1,13 @@
 public class Ala {
 
     String especialidade;
-      int id;
+    int id;
+    Quarto quarto;
     
-Quarto quarto = new Quarto();
+    Ala(int id, String espc, Quarto quarto){
 
-    Ala(int id, String espc){
-      
         this.id = id;
-      
+        this.quarto = quarto;
         this.especialidade = espc;
 
     }
@@ -16,7 +15,6 @@ Quarto quarto = new Quarto();
   
     public void Relatorio() {
         System.out.print("ID: " + id + "\n");
-      
         System.out.print("Especialidade: " + especialidade + "\n");
         quarto.Vazio();
     }
